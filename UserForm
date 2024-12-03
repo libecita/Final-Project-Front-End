@@ -1,0 +1,79 @@
+import './UserStyle.css';
+import {useEffect, useState} from "react";
+import UserPage from "./UserPage";
+
+
+
+function UserForm(props){
+    const user = props.user
+    const onSave = props.onSave
+    const handleSubmit = (e, {onSave,formData, user}) => {
+        e.preventDefault();
+        onSave(formData, user ? user.userIdentifier : null);
+    };
+    const handleChange = (e,{setFormData}) => {
+        const {name, value} = e.target;
+        setFormData((prev) => ({...prev, [name]: value})); // Function useful to set the form data with whatever the user enters.
+        // keep updating the previous value of the dictionary of {name.value} pairs with the new entered pair
+    };
+
+    const [formData, setFormData] = useState({
+        userId:'',
+        username: '',
+        lastname: '',
+        firstname: '',
+        email: '',
+        relationshipStatus: '',
+        dateOfBirth: '',
+        password:  '',
+
+    });
+    useEffect(() => {
+        if (user) {
+            setFormData({
+                userId: user.userId,
+                username: user.username,
+                lastname: user.lastname,
+                firstname: user.firstname,
+                email: user.email,
+                relationshipStatus: user.relationshipStatus,
+                dateOfBirth: user.dateOfBirth,
+                password: user.password
+
+            });
+        }
+    }, [user]);
+
+    //  The USERFORM component returns the JSX code that builds the form:
+
+    return (
+        <div className='form-container'>
+            <h2>{user ? 'Edit User' : 'Add New User'}</h2>
+            <form onSubmit={handleSubmit}>
+
+                <div className="mb-3">
+                    <label> User ID: </label>
+                    <input type="text" name="id" value={user ? user.user : 'New ID'} readOnly/>
+                </div>
+
+                <div className="mb-3">
+                    <label> Last Name: </label>
+                    <input type="text" name="lastname" value={formData.lastname} onChange={handleChange} required/>
+                </div>
+
+                <div className="mb-3">
+                    <label> First Name </label>
+                    <input type="text" name="firstname" value={formData.firstname} onChange={handleChange} required/>
+                </div>
+
+            </form>
+
+        </div>
+    )
+
+}
+
+
+
+
+export default UserForm;
