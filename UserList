@@ -1,0 +1,23 @@
+import {Button, Table} from "react-bootstrap";
+import UserPage from "./UserPage";
+import './UserStyle.css';
+
+function UserList(props ,{onAddNew}) {
+    return (
+
+        <div className='container-mt-4'>
+            <h2 className="mb-4">User List</h2>
+            <Button variant="primary" onClick=
+                {() => onAddNew()}>Add new User</Button>
+            <Table striped bordered hover>
+                <thread></thread>
+            </Table>
+        </div>
+
+    )
+}
+
+
+export default UserList;
+
+
