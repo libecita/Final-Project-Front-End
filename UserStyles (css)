@@ -1,0 +1,140 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+/*!* Header *!*/
+/*.header {*/
+/*  background-color: darkturquoise;*/
+/*  color: beige;*/
+/*  padding: 10px 20px;*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*}*/
+
+/*.header .logo {*/
+/*  font-size: 24px;*/
+/*  font-weight: bold;*/
+/*}*/
+
+/*.header .search-bar {*/
+/*  flex-grow: 1;*/
+/*  margin: 0 20px;*/
+/*}*/
+
+/*.header .search-bar input {*/
+/*  width: 100%;*/
+/*  padding: 5px;*/
+/*  border-radius: 20px;*/
+/*  border: none;*/
+/*}*/
+
+/*.header .nav-links {*/
+/*  display: flex;*/
+/*  gap: 15px;*/
+/*}*/
+
+/*.header .nav-links a {*/
+/*  color: white;*/
+/*  text-decoration: none;*/
+/*  font-size: 16px;*/
+/*}*/
+
+/*!* Sidebar *!*/
+/*.sidebar {*/
+/*  width: 250px;*/
+/*  background-color: white;*/
+/*  padding: 20px;*/
+/*  position: fixed;*/
+/*  top: 60px;*/
+/*  bottom: 0;*/
+/*  overflow-y: auto;*/
+/*  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.sidebar .menu-item {*/
+/*  padding: 10px 0;*/
+/*  font-size: 18px;*/
+/*  color: #333;*/
+/*}*/
+
+/*.sidebar .menu-item:hover {*/
+/*  background-color: #f0f2f5;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*!* Main Content *!*/
+/*.main-content {*/
+/*  margin-left: 270px;*/
+/*  padding: 20px;*/
+/*  background-color: #f0f2f5;*/
+/*  min-height: 100vh;*/
+/*}*/
+
+
+/* Footer */
+.footer {
+    background-color: moccasin;
+    color: cadetblue;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* UserProfile.css  =  make a red edit button*/
+
+.profile-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+
+.edit-button {
+    padding: 10px 20px;
+    background-color: red;  /* Red background */
+    color: white;           /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: darkred;  /* Darker red on hover */
+}
+
+.edit-form {
+    margin-top: 20px;
+}
+
+.edit-form input {
+    margin: 5px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
